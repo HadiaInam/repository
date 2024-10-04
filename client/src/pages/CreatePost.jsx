@@ -1,8 +1,7 @@
 import { getDownloadURL, getStorage, uploadBytesResumable, ref } from 'firebase/storage';
 import { Alert, Button, FileInput, Select, TextInput } from 'flowbite-react'
 import { useState } from 'react';
-import ReactQuill from 'react-quill';
-import 'react-quill/dist/quill.snow.css';
+
 import { app } from '../firebase';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import { useSelector } from "react-redux"
@@ -109,7 +108,7 @@ export default function CreatePost() {
             </div>
             {imageUploadError && (<Alert color="failure">{imageUploadError}</Alert>)}
             {formData.image && (<img src={formData.image} alt='upload' className='w-full h-72 object-cover'/>)}
-            <ReactQuill required theme='snow' placeholder='Write something...' className='h-72 mb-12' onChange={
+            <TextInput required placeholder='Write something...' className='h-72 mb-12' onChange={
               (value) => {
                 setFormData({...formData, content:value})
                 
