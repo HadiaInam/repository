@@ -5,8 +5,8 @@ import ReactQuill from 'react-quill';
 import 'react-quill/dist/quill.snow.css';
 import { app } from '../firebase';
 import { CircularProgressbar } from 'react-circular-progressbar';
-import { useSelector } from "react-redux"
-import { useNavigate, useParams , useSelector} from 'react-router-dom'
+import { useSelector } from 'react-redux';
+import { useNavigate, useParams} from 'react-router-dom'
 
 
 export default function UpdatePost() {
